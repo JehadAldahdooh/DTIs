@@ -2,8 +2,6 @@
 </p>
 <h1 align="center"> Using BERT to identify drug-target interactions from whole PubMed
 </h1>
-<h3 align="center"> A Comparative Study between Different Pre-processing Approaches and Classifiers </h3>  
-</br>
 <p align="center"> 
   <img src="images/pipeline.gif" alt="Pipeline" width="70%" height="70%">
 </p>
@@ -18,7 +16,7 @@
     <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
   </ol>
 </details>
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 <!-- ABOUT THE PROJECT -->
 <h2 id="about-the-project"> :pencil: About</h2>
