@@ -16,7 +16,7 @@ from transformers import (
 from sklearn.model_selection import KFold,StratifiedKFold
 from sklearn.metrics import accuracy_score
 from torch.utils.data import Dataset, DataLoader
-import gc
+import gcf
 
 def seed_all(seed_value):
     random.seed(seed_value) 
@@ -37,19 +37,6 @@ def format_time(elapsed):
     elapsed_rounded = int(round((elapsed)))
     # format as hh:mm:ss
     return str(datetime.timedelta(seconds=elapsed_rounded))
-
-def Metric(y_true, y_pred,target_names):
-    accuracy = accuracy_score(y_true, y_pred)
-    macro_precision = precision_score(y_true, y_pred, average='macro')
-    macro_recall = recall_score(y_true, y_pred, average='macro')
-    weighted_f1 = f1_score(y_true, y_pred, average='macro')
-    report = classification_report(y_true, y_pred, target_names=target_names, digits=3)
-    
-    print('Accuracy: {:.1%}\nPrecision: {:.1%}\nRecall: {:.1%}\nF1: {:.1%}'.format(accuracy, macro_precision,
-                                           macro_recall, weighted_f1))
-    print("classification_report:\n")
-    print(report)
-
 
 # plot results
 def plot_results(df):
@@ -77,7 +64,6 @@ def clean(text):
     text = [x.strip() for x in text] #strip remove the whitespces in the text
     text = [x.replace('\n', ' ').replace('\t', ' ') for x in text]
     text = ' '.join(text)
-    #text = re.sub('([.,!?()])', r' \1 ', text)  #I don't need it for example 2.3  name including dot and so on
     return text
     
 
