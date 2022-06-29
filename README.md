@@ -2,6 +2,7 @@
 </p>
 <h1 align="center"> Using BERT to identify drug-target interactions from whole PubMed
 </h1>
+<h3 align="center"> Code will be updated regularly </h3>  
 <p align="center"> 
   <img src="images/pipeline.gif" alt="Pipeline" width="70%" height="70%">
 </p>
